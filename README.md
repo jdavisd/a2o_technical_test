@@ -27,5 +27,7 @@ Run Docker-Compose:
 
 docker-compose up -d --build
 Congratulations !!! The app should be up and running. To access the React frontend go to localhost:3000, and to access the Django backend go to localhost:8000/api. F
+# Problem 1 
+![Texto alternativo](readme_assets/problem_1_sample_1.png)
 
 
