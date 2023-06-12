@@ -16,7 +16,8 @@ Axios (To make calls to the Django Backend)
 React-Router-Dom and Router-Dom (For managing routing)
 
 # Install (Run) with Docker
-bBfore install make sure you have installed docker compose in your enviroment
+Before install make sure you have installed docker compose in your enviroment
+
 Clone the repo:
 
 git clone https://github.com/jdavisd/a2o_technical_test.git
