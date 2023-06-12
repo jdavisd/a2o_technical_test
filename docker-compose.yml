@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./a2o-frontend-test
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./a2o-frontend-test/src:/app/src
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./a2o_test
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./a2o_test:/app
