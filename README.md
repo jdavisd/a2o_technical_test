@@ -26,7 +26,8 @@ git clone https://github.com/jdavisd/a2o_technical_test.git
 Run Docker-Compose:
 
 docker-compose up -d --build
-The app should be up and running. To access the React frontend go to localhost:3000, and to access the Django backend go to localhost:8000/api. 
+The app should be up and running. To access the React frontend, go to localhost:3000/problem-1 and localhost:3000/problem-2. To access the Django backend, go to localhost:8000/api/problem-1 and localhost:8000/api/problem-2 for problem 1 and problem 2, respectively. 
+Note: Make sure to replace "localhost" with the appropriate IP address or domain if you are accessing the app from a remote server.
 # Problem 1 
 ![Texto alternativo](readme_assets/problem_1_sample_1.png)
 ![Texto alternativo](readme_assets/problem_1_sample_2.png)
