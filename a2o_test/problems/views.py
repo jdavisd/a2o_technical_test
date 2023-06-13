@@ -9,7 +9,7 @@ def problem1(request):
     try: 
           rq=int(request.data.get('rq'))-1
           data = {
-            'message': queensAttack(int(request.data.get('n')),int(request.data.get('k')),rq,int(request.data.get('cq'))-1,request.data.get('obstacles')),
+            'response': queensAttack(int(request.data.get('n')),int(request.data.get('k')),rq,int(request.data.get('cq'))-1,request.data.get('obstacles')),
              'ok':True
           }
           return Response(data)

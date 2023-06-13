@@ -36,7 +36,7 @@ function Problem1Page() {
           obstacles: obstacles,
         })
           .then((data) => {
-            setResponse(data.message);
+            setResponse(data.response);
           })
           .catch((error) => {
             console.error(error);
