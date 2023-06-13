@@ -4,22 +4,30 @@ import { problem1 } from "../services/services";
 function Problem1Page() {
   const [text, setText] = useState("");
   const [response, setResponse] = useState("");
-  
+
   const handleChange = (event) => {
     setText(event.target.value)
+    let positionAllow=true
     const input = event.target.value;
     const inputArr = input.split(/\n| /g).map((str) => parseInt(str)).filter((value) => !Number.isNaN(value));
-    
+
     if (inputArr.length > 3) {
       const obstacles = [];
-      
+
       if (inputArr[1] > 0) {
         for (let i = 4; i < inputArr.length; i += 2) {
           obstacles.push([inputArr[i], inputArr[i + 1]]);
         }
       }
-      
-      if (inputArr[1] === obstacles.length) {
+      const quenPos = [inputArr[2], inputArr[3]]
+      console.log(obstacles)
+      console.log(quenPos, "Quen")
+      obstacles.forEach(element => {
+        if (element[0] === inputArr[2] && element[1] === inputArr[3]) {
+          positionAllow=false
+        }
+      });
+      if (inputArr[1] === obstacles.length&&positionAllow) {
         problem1({
           n: inputArr[0],
           k: inputArr[1],
@@ -36,7 +44,7 @@ function Problem1Page() {
       }
     }
   };
-  
+
   return (
     <Box>
       <Container maxWidth="sm" sx={{ p: 2 }}>
@@ -51,8 +59,8 @@ function Problem1Page() {
             Problem 1
           </Typography>
           <Stack spacing={2}>
-          <textarea  style={ { height: '12em'}}align="center"value={text} id="input-1" onChange={handleChange} />
-          <pre id="output-1">{response}</pre>
+            <textarea style={{ height: '12em' }} align="center" value={text} id="input-1" onChange={handleChange} />
+            <pre id="output-1">{response}</pre>
           </Stack>
 
         </Paper>
