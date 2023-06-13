@@ -1,7 +1,7 @@
 # a2o_technical_test
 # Description
 This repository is a technical trial for a2o dev.
-# Tech Stack and Packages Installed
+# Packages Installed
 Django: This is the backbone of the backend api, and has the following packages installed:
 
 Django Rest Framework (For the Rest API)
