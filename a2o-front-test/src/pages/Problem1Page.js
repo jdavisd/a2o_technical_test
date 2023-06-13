@@ -19,7 +19,6 @@ function Problem1Page() {
           obstacles.push([inputArr[i], inputArr[i + 1]]);
         }
       }
-      const quenPos = [inputArr[2], inputArr[3]]
       obstacles.forEach(element => {
         if (element[0] === inputArr[2] && element[1] === inputArr[3]) {
           positionAllow=false
